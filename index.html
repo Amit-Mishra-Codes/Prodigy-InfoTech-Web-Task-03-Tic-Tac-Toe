@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A responsive Tic-Tac-Toe game built with HTML, CSS and JavaScript for Prodigy InfoTech Web Development Task 3.">
+  <title>Tic-Tac-Toe | Prodigy InfoTech Task 03</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand-mark">P</div>
+      <div>
+        <p class="eyebrow">PRODIGY INFOTECH · WEB DEVELOPMENT</p>
+        <h1>Tic-Tac-Toe</h1>
+      </div>
+      <span class="task-badge">TASK 03</span>
+    </header>
+
+    <section class="intro">
+      <p class="eyebrow">THINK. PLAN. PLAY.</p>
+      <h2>Three in a row.<br><span>One smart move at a time.</span></h2>
+      <p class="intro-copy">A modern, responsive classic. Play with a friend or challenge the computer.</p>
+    </section>
+
+    <section class="game-card" aria-label="Tic-Tac-Toe game">
+      <div class="game-toolbar">
+        <div>
+          <p class="section-label">CURRENT TURN</p>
+          <p class="turn-line"><span id="turn-symbol" class="turn-symbol">X</span><span id="status" aria-live="polite">Player X's turn</span></p>
+        </div>
+        <label class="mode-control" for="mode">
+          <span>Game mode</span>
+          <select id="mode">
+            <option value="friend">2 Players</option>
+            <option value="computer">Vs Computer</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="scoreboard">
+        <div class="score-item active-score" id="x-score-card"><span class="score-symbol x-color">X</span><span class="score-name">PLAYER X</span><strong id="x-score">0</strong></div>
+        <div class="score-item" id="draw-score-card"><span class="score-symbol draw-color">＝</span><span class="score-name">DRAWS</span><strong id="draw-score">0</strong></div>
+        <div class="score-item" id="o-score-card"><span class="score-symbol o-color">O</span><span class="score-name" id="o-label">PLAYER O</span><strong id="o-score">0</strong></div>
+      </div>
+
+      <div class="board" id="board" role="grid" aria-label="Tic-Tac-Toe board">
+        <button class="cell" data-index="0" role="gridcell" aria-label="Row 1, column 1"></button>
+        <button class="cell" data-index="1" role="gridcell" aria-label="Row 1, column 2"></button>
+        <button class="cell" data-index="2" role="gridcell" aria-label="Row 1, column 3"></button>
+        <button class="cell" data-index="3" role="gridcell" aria-label="Row 2, column 1"></button>
+        <button class="cell" data-index="4" role="gridcell" aria-label="Row 2, column 2"></button>
+        <button class="cell" data-index="5" role="gridcell" aria-label="Row 2, column 3"></button>
+        <button class="cell" data-index="6" role="gridcell" aria-label="Row 3, column 1"></button>
+        <button class="cell" data-index="7" role="gridcell" aria-label="Row 3, column 2"></button>
+        <button class="cell" data-index="8" role="gridcell" aria-label="Row 3, column 3"></button>
+      </div>
+
+      <div class="game-actions">
+        <button class="primary-btn" id="new-round">↻ <span>New Round</span></button>
+        <button class="secondary-btn" id="reset-score">Reset Scores</button>
+      </div>
+      <p class="helper-text">Tip: Get three marks in a horizontal, vertical, or diagonal line to win.</p>
+    </section>
+
+    <footer><span>BUILT WITH HTML · CSS · JAVASCRIPT</span><span>PRODIGY INFOTECH · TASK 03</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
